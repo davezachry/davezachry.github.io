@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weather App</title>
+  <title>PWA Demo</title>
   <link rel="stylesheet" type="text/css" href="./styles/sanitize.css">
   <link rel="stylesheet" type="text/css" href="./styles/inline.css">
 </head>
@@ -37,6 +37,14 @@
         console.warn('Error whilst registering service worker', err);
       });
     }
+    // HANDLE ONLINE / OFFLINE STATUS
+    window.addEventListener('online', function(e) {
+        console.log("You are online");
+    }, false);
+
+    window.addEventListener('offline', function(e) {
+        console.log("You are offline");
+    }, false);
   </script>
 
 </body>
